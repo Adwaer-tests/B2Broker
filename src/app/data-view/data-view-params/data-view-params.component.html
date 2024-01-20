@@ -1,0 +1,31 @@
+<form [formGroup]='formGroup'>
+  <mat-form-field>
+    <mat-label>Timer, ms</mat-label>
+    <input matInput type='number' formControlName='timer'>
+    @if (formGroup.get('timer')!.hasError('required')) {
+    <mat-error>Timer is <strong>required</strong></mat-error>
+    }
+    @if (formGroup.get('timer')!.hasError('min')) {
+    <mat-error>Timer min value is <strong>10</strong></mat-error>
+    }
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Array size</mat-label>
+    <input matInput type='number' formControlName='size'>
+    @if (formGroup.get('size')!.hasError('required')) {
+    <mat-error>Array Size is <strong>required</strong></mat-error>
+    }
+    @if (formGroup.get('size')!.hasError('min')) {
+    <mat-error>Array Size min value is <strong>1</strong></mat-error>
+    }
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Additional array ids</mat-label>
+    <input matInput type='text' formControlName='ids'>
+    @if (formGroup.get('ids')!.hasError('arrayOfNumbers')) {
+    <mat-error>The value must be an <strong>array of numbers</strong></mat-error>
+    }
+  </mat-form-field>
+</form>

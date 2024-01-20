@@ -1,0 +1,20 @@
+.view {
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid rgb(0 0 0 / 20%);
+  margin: 10px;
+
+  > div {
+    margin: 0;
+  }
+
+  div {
+    margin: 10px 0;
+
+    > span {
+      padding: 5px;
+      border-radius: 5px;
+    }
+  }
+}

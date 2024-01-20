@@ -1,0 +1,16 @@
+<div class='view'>
+  <div class='view__params'>
+    <bb-data-view-params />
+  </div>
+
+  <div class='view__table'>
+    <div class='view__table__head'>
+      <bb-data-view-header />
+    </div>
+    <div class='view__table__items'>
+      <div class='view__table__item' *ngFor='let item of items$ | async; trackBy: trackById'>
+        <bb-data-view-item [item]='item' />
+      </div>
+    </div>
+  </div>
+</div>

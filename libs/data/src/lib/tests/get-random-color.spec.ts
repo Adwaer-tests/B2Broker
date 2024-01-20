@@ -1,4 +1,4 @@
-import { getRandomColor } from '../functions/get-random-color';
+import { getRandomColor } from '../functions';
 
 describe('get-random-color', () => {
   it('should return color', () => {

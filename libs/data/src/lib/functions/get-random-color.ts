@@ -1,11 +1,11 @@
 const colors = new Map<number, string>([
   [0, 'gray'],
-  [1, 'black'],
+  [1, 'orange'],
   [2, 'red'],
   [3, 'yellow'],
-  [4, 'green'],
-  [5, 'blue'],
-  [6, 'purple'],
+  [4, 'lime'],
+  [5, 'lightblue'],
+  [6, 'azure'],
   [7, 'white']
 ]);
 const totalColorNumber = colors.size;

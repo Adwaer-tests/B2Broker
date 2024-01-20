@@ -1,4 +1,4 @@
-import { generateArray } from '../functions/generate-array';
+import { generateArray } from '../functions';
 
 describe('generate-array', () => {
   it('should generate proper items count', () => {

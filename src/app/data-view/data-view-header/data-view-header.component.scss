@@ -1,0 +1,6 @@
+.view {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) 2fr;
+  justify-items: center;
+  font-weight: bold;
+}

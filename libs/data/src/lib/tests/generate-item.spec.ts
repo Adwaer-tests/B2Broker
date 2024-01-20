@@ -1,4 +1,4 @@
-import { makeGenerator } from '../functions/generate-item';
+import { makeGenerator } from '../functions';
 import { DataItem } from '@bb/common';
 
 describe('generate-item', () => {

@@ -1,4 +1,4 @@
-import { getRandomNumber, getRandomNumberInRange } from '../functions/get-random-number';
+import { getRandomNumber, getRandomNumberInRange } from '../functions';
 
 describe('get-random-number', () => {
 

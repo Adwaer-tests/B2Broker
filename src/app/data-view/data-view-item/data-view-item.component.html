@@ -1,0 +1,13 @@
+<div class='view'>
+  <div> {{item.id}} </div>
+  <div> {{item.int}} </div>
+  <div> {{(item.float + '' | slice:0:9) + '...'}}</div>
+  <div>
+    <span [style.background]='item.color'>
+      {{item.color}}
+    </span>
+  </div>
+  <div>
+    <bb-data-view-item-child [data]='item.child' />
+  </div>
+</div>

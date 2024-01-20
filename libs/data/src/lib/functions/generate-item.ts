@@ -1,14 +1,14 @@
 import { DataItem } from '@bb/common';
 import { getRandomColor } from './get-random-color';
-import { getRandomNumber, getRandomNumberInRange } from './get-random-number';
+import { getRandomNumberInRange } from './get-random-number';
 
-const makeDataItem = (index: number, totalCount: number): DataItem => ({
-  id: String(index),
+export const makeDataItem = (index: number, totalCount: number): DataItem => ({
+  id: getRandomNumberInRange(totalCount),
   color: getRandomColor(),
-  int: +getRandomNumber(),
-  float: +getRandomNumber(18),
+  int: +getRandomNumberInRange(1000000000),
+  float: getRandomNumberInRange(100, 18),
   child: {
-    id: index + getRandomNumberInRange(totalCount).padStart(totalCount + 1, '0'),
+    id: getRandomNumberInRange(10) + getRandomNumberInRange(totalCount).padStart(String(totalCount).length, '0'),
     color: getRandomColor()
   }
 });

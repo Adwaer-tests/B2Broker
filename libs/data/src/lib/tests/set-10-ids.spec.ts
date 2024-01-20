@@ -1,20 +1,9 @@
 import { DataItem } from '@bb/common';
-import { getRandomColor } from '../functions/get-random-color';
-import { getRandomNumber, getRandomNumberInRange } from '../functions/get-random-number';
-import { set10Ids } from '../functions/set-10-ids';
+import { set10Ids, makeDataItem } from '../functions';
 
 const getDataItems = (count: number): DataItem[] =>
   Array.from({ length: count })
-    .map((_, index) => ({
-      id: String(index),
-      color: getRandomColor(),
-      int: +getRandomNumber(),
-      float: +getRandomNumber(18),
-      child: {
-        id: index + getRandomNumberInRange(10).padStart(11, '0'),
-        color: getRandomColor()
-      }
-    }));
+    .map((_, index) => makeDataItem(index, count));
 
 describe('set-10-ids', () => {
   const ids10 = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'];

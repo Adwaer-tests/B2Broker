@@ -1,0 +1,29 @@
+.view {
+  background: whitesmoke;
+  margin: 100px auto 0;
+  max-width: 800px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+
+  &__params {
+    padding: 10px 20px 0;
+    border-bottom: 1px solid rgb(0 0 0 / 20%);
+  }
+
+  &__table {
+
+    &__head {
+      padding: 10px 20px 0;
+    }
+
+    &__items {
+      padding: 0 18px;
+      max-height: 450px;
+      overflow-y: auto;
+    }
+
+    &__item {
+      margin: 20px 0;
+      border: 1px solid rgb(0 0 0 / 20%);
+    }
+  }
+}

@@ -1,6 +1,5 @@
 import { BehaviorSubject, finalize, interval, map, mergeMap, Observable } from 'rxjs';
-import { generateArray } from './functions/generate-array';
-import { set10Ids } from './functions/set-10-ids';
+import { generateArray } from './functions';
 import { DataItem } from '@bb/common';
 
 export class DataProvider {
@@ -31,9 +30,5 @@ export class DataProvider {
 
   setArraySize(size: number) {
     this.arraySizeSubj$.next(size);
-  }
-
-  setCustomIds(ids: string[]) {
-    set10Ids(this.data, ids);
   }
 }
